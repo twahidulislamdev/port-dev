@@ -3,7 +3,7 @@ import { SlScreenSmartphone } from "react-icons/sl";
 import SkillsIcon from "../SkillsIcon";
 import HtmlLogo from '../../assets/htmlLogo.png'
 import CssLogo from '../../assets/cssLogo.png'
-import TailwindLogo from '../../assets/TailwindLogo.png'
+import TailwindLogo from '../../assets/tailwindLogo.png'
 import JsLogo from '../../assets/jsLogo.png'
 import ReactLogo from '../../assets/ReactLogo.png'
 import ReduxLogo from '../../assets/reduxLogo.png'
