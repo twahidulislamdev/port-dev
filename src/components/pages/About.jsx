@@ -5,10 +5,10 @@ import HtmlLogo from '../../assets/htmlLogo.png'
 import CssLogo from '../../assets/cssLogo.png'
 import TailwindLogo from '../../assets/tailwindLogo.png'
 import JsLogo from '../../assets/jsLogo.png'
-import ReactLogo from '../../assets/ReactLogo.png'
+import ReactLogo from '../../assets/reactLogo.png'
 import ReduxLogo from '../../assets/reduxLogo.png'
 import NextJsLogo from '../../assets/nextJsLogo.png'
-import TypeScriptLogo from '../../assets/TypeScriptLogo.png'
+import TypeScriptLogo from '../../assets/typeScriptLogo.png'
 const About = () => {
   return (
     <>
