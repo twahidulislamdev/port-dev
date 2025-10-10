@@ -5,7 +5,7 @@ import HtmlLogo from '../../assets/htmlLogo.png';
 import CssLogo from '../../assets/cssLogo.png';
 import TailwindLogo from '../../assets/tailwindLogo.png';
 import JsLogo from '../../assets/jsLogo.png';
-import ReactLogo from '../../assets/reactLogo.png';
+// import ReactLogo from '../../assets/reactLogo.png';
 import ReduxLogo from '../../assets/reduxLogo.png';
 import NextJsLogo from '../../assets/nextJsLogo.png';
 import TypeScriptLogo from '../../assets/typeScriptLogo.png';
@@ -66,7 +66,7 @@ const About = () => {
             <SkillsIcon SkillsLogo={CssLogo} logoName="CSS" />
             <SkillsIcon SkillsLogo={TailwindLogo} logoName="Tailwind" />
             <SkillsIcon SkillsLogo={JsLogo} logoName="JavaScript" />
-            <SkillsIcon SkillsLogo={ReactLogo} logoName="React" />
+            {/* <SkillsIcon SkillsLogo={ReactLogo} logoName="React" /> */}
             <SkillsIcon SkillsLogo={ReduxLogo} logoName="Redux" />
             <SkillsIcon SkillsLogo={NextJsLogo} logoName="Next.js" />
             <SkillsIcon SkillsLogo={TypeScriptLogo} logoName="TypeScript" />
