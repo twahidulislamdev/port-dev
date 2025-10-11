@@ -1,14 +1,14 @@
 import { FaLaptopCode } from "react-icons/fa";
 import { SlScreenSmartphone } from "react-icons/sl";
 import SkillsIcon from "../SkillsIcon";
-import HtmlLogo from '../../assets/htmlLogo.png'
-import CssLogo from '../../assets/cssLogo.png'
-import TailwindLogo from '../../assets/tailwindLogo.png'
-import JsLogo from '../../assets/jsLogo.png'
-import RLogo from "../../assets/rLogo.png"
-import ReduxLogo from '../../assets/reduxLogo.png'
-import NextJsLogo from '../../assets/nextJsLogo.png'
-import TypeScriptLogo from "../../assets/typeScriptLogo.png"
+import HtmlLogo from '/src/assets/htmlLogo.png'
+import CssLogo from '/src/assets/cssLogo.png'
+import TailwindLogo from '/src/assets/tailwindLogo.png'
+import JsLogo from '/src/assets/jsLogo.png'
+import RIcon from "/src/assets/rIcon.png"
+import ReduxLogo from '/src/assets/reduxLogo.png'
+import NextJsLogo from '/src/assets/nextJsLogo.png'
+import TsIcon from "/src/assets/tsIcon.png"
 const About = () => {
   return (
     <>
@@ -73,10 +73,10 @@ const About = () => {
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />
                 <SkillsIcon className={""} SkillsLogo={JsLogo} logoName={"JavaScript"} />
-                <SkillsIcon className={""} SkillsLogo={RLogo} logoName={"React"} />
+                <SkillsIcon className={""} SkillsLogo={RIcon} logoName={"React"} />
                 <SkillsIcon className={""} SkillsLogo={ReduxLogo} logoName={"Redux"} />
                 <SkillsIcon className={""} SkillsLogo={NextJsLogo} logoName={"Next.js"} />
-                <SkillsIcon className={""} SkillsLogo={TypeScriptLogo} logoName={"TypeScript"} />
+                <SkillsIcon className={""} SkillsLogo={TsIcon} logoName={"TypeScript"} />
               </div>
             </div>
             <div className="w-[49%] h-[235px]">
@@ -86,10 +86,10 @@ const About = () => {
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />
                 <SkillsIcon className={""} SkillsLogo={JsLogo} logoName={"JavaScript"} />
-                <SkillsIcon className={""} SkillsLogo={RLogo} logoName={"React"} />
+                <SkillsIcon className={""} SkillsLogo={RIcon} logoName={"React"} />
                 <SkillsIcon className={""} SkillsLogo={ReduxLogo} logoName={"Redux"} />
                 <SkillsIcon className={""} SkillsLogo={NextJsLogo} logoName={"Next.js"} />
-                <SkillsIcon className={""} SkillsLogo={TypeScriptLogo} logoName={"TypeScript"} />
+                <SkillsIcon className={""} SkillsLogo={TsIcon} logoName={"TypeScript"} />
               </div>
             </div>
           </div>
