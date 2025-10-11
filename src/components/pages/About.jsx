@@ -5,10 +5,10 @@ import HtmlLogo from '../../assets/htmlLogo.png'
 import CssLogo from '../../assets/cssLogo.png'
 import TailwindLogo from '../../assets/tailwindLogo.png'
 import JsLogo from '../../assets/jsLogo.png'
-import ReactLogo from '../../assets/reactLogo.png'
+import RLogo from "../../assets/rLogo.png"
 import ReduxLogo from '../../assets/reduxLogo.png'
 import NextJsLogo from '../../assets/nextJsLogo.png'
-import TypeScriptLogo from '../../assets/typeScriptLogo.png'
+import TypeScriptLogo from "../../assets/typeScriptLogo.png"
 const About = () => {
   return (
     <>
@@ -73,7 +73,7 @@ const About = () => {
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />
                 <SkillsIcon className={""} SkillsLogo={JsLogo} logoName={"JavaScript"} />
-                <SkillsIcon className={""} SkillsLogo={ReactLogo} logoName={"React"} />
+                <SkillsIcon className={""} SkillsLogo={RLogo} logoName={"React"} />
                 <SkillsIcon className={""} SkillsLogo={ReduxLogo} logoName={"Redux"} />
                 <SkillsIcon className={""} SkillsLogo={NextJsLogo} logoName={"Next.js"} />
                 <SkillsIcon className={""} SkillsLogo={TypeScriptLogo} logoName={"TypeScript"} />
@@ -86,7 +86,7 @@ const About = () => {
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />
                 <SkillsIcon className={""} SkillsLogo={JsLogo} logoName={"JavaScript"} />
-                <SkillsIcon className={""} SkillsLogo={ReactLogo} logoName={"React"} />
+                <SkillsIcon className={""} SkillsLogo={RLogo} logoName={"React"} />
                 <SkillsIcon className={""} SkillsLogo={ReduxLogo} logoName={"Redux"} />
                 <SkillsIcon className={""} SkillsLogo={NextJsLogo} logoName={"Next.js"} />
                 <SkillsIcon className={""} SkillsLogo={TypeScriptLogo} logoName={"TypeScript"} />
