@@ -12,15 +12,15 @@ import Container from './components/Container';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-[#121212] py-5 ">
-        <Container className="flex-none lg:flex lg:justify-between space-x-5 text-white">
-          {/* Side Ear start  */}
-          <SideBar className={""} />
-          {/* <Side Bar End  */}
-          {/* Main Part start  */}
-          <div className="w-full lg:w-[73%] h-auto bg-[#1e1e1f] rounded-2xl overflow-hidden ">
+      <div className="bg-none lg:bg-[#121212] py-3 sm:py-4 md:py-5 min-h-screen">
+        <Container className="flex flex-col lg:flex-row gap-4 lg:gap-5 text-white">
+          {/* Side Bar start */}
+          <SideBar />
+          {/* Side Bar End */}
+          {/* Main Part start */}
+          <div className="w-full lg:w-[73%] h-auto bg-[#1e1e1f] rounded-2xl overflow-hidden mt-4 lg:mt-0">
             <Header />
-            <div className="p-4 ">
+            <div className="p-2 sm:p-4">
               <Routes>
                 <Route path="/" element={<About />} />
                 <Route path="/resume" element={<Resume />} />
@@ -30,11 +30,9 @@ function App() {
               </Routes>
             </div>
           </div>
-          {/* Main Part End  */}
+          {/* Main Part End */}
         </Container>
       </div>
-
-
     </BrowserRouter>
   );
 }
