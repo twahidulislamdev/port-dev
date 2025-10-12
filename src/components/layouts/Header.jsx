@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className="w-[60%] m-auto flex justify-center items-center bg-[#282829] p-4 rounded-b-xl">
-      <ul className="flex space-x-10">
+    <nav className="hidden lg:block w-[60%] m-auto flex justify-center items-center  bg-[#282829] p-4 rounded-b-xl">
+      <ul className="w-full m-auto flex justify-between space-x-10">
         <li><Link to="/" className="hover:text-yellow-400">About</Link></li>
         <li><Link to="/resume" className="hover:text-yellow-400">Resume</Link></li>
         <li><Link to="/project" className="hover:text-yellow-400">Project</Link></li>

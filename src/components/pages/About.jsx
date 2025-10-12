@@ -12,14 +12,14 @@ import TsIcon from "/src/assets/tsIcon.png"
 const About = () => {
   return (
     <>
-      <div className='px-3 py-5'>
+      <div className='w-full py-5'>
         {/* About Me parat Start  */}
         <div className="">
           <div className="flex justify-start items-center gap-x-2">
             <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
             <h3 className='text-3xl font-semibold'>ABOUT ME</h3>
           </div>
-          <p className='pt-5 text-md text-neutral-400 leading-6.5'>
+          <p className='pt-5 text-md text-neutral-400 leading-6.5 lg:auto px-2  '>
             I’m a passionate MERN Stack Developer committed to creating innovative, high-quality web and mobile applications. Having completed my journey in Front-End, Back-End, and React Native development, I’ve built strong expertise in React.js, Next.js, Redux Toolkit, Tailwind CSS, Node.js, Express.js, MongoDB, MySQL, and React Native.
             <br />
 
@@ -34,8 +34,8 @@ const About = () => {
             <h3 className='text-3xl font-semibold'>What I Am Doing</h3>
           </div>
           <div className="">
-            <div className="flex justify-start items-center gap-x-5 mt-5">
-              <div className="w-[48%] h-[180px] bg-[#202022] px-5 py-10  rounded-lg shadow shadow-gray-700">
+            <div className="flex-none lg:flex justify-start items-center  gap-x-5 mt-5">
+              <div className="w-full lg:w-[48%] h-[180px] bg-[#202022] px-5  py-10  rounded-lg shadow shadow-gray-700">
                 <div className="flex justify-start items-center gap-x-5">
                   <FaLaptopCode className="text-[100px]" />
                   <div className="space-y-2">
@@ -44,7 +44,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[48%] h-[180px] bg-[#202022] px-5 py-10  rounded-lg shadow shadow-gray-700">
+              <div className="w-full lg:w-[48%] h-[180px] bg-[#202022] px-5 py-10  rounded-lg shadow shadow-gray-700">
                 <div className="flex justify-start items-center gap-x-5">
                   <SlScreenSmartphone className="text-[90px]" />
                   <div className="space-y-2">
@@ -65,10 +65,10 @@ const About = () => {
             <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
             <h3 className='text-3xl font-semibold'>My Skills</h3>
           </div>
-          <div className="w-full pt-5 flex justify-between items-center ">
-            <div className="w-[49%] h-[235px]">
-              <h4 className="pb-5 text-xl font-semibold text-center">Front-End  </h4>
-              <div className=" bg-[#202022] gap-2 flex justify-between items-center flex-wrap rounded-lg shadow shadow-gray-700">
+          <div className="w-full pt-5 flex-none lg:flex justify-between items-center ">
+            <div className="w-full lg:w-[49%] h-auto lg:h-[235px]">
+              <h4 className="w-full pb-5 text-xl font-semibold text-start lg:text-center">Front-End  </h4>
+              <div className="w-[400px] bg-[#202022] lg:gap-2 flex justify-between items-center flex-wrap rounded-lg shadow shadow-gray-700">
                 <SkillsIcon className={""} SkillsLogo={HtmlLogo} logoName={"Html"} />
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />
@@ -79,9 +79,9 @@ const About = () => {
                 <SkillsIcon className={""} SkillsLogo={TsIcon} logoName={"TypeScript"} />
               </div>
             </div>
-            <div className="w-[49%] h-[235px]">
-              <h4 className="pb-5 text-xl font-semibold text-center">Back-End  </h4>
-              <div className=" bg-[#202022] gap-2 flex justify-between items-center flex-wrap rounded-lg shadow shadow-gray-700">
+            <div className="w-full lg:w-[49%] h-auto lg:h-[235px] mt-10 lg:mt-0">
+              <h4 className="w-full pb-5 text-xl font-semibold text-start lg:text-center">Front-End  </h4>
+              <div className="w-[400px] bg-[#202022] lg:gap-2 flex justify-between items-center flex-wrap rounded-lg shadow shadow-gray-700">
                 <SkillsIcon className={""} SkillsLogo={HtmlLogo} logoName={"Html"} />
                 <SkillsIcon className={""} SkillsLogo={CssLogo} logoName={"CSS"} />
                 <SkillsIcon className={""} SkillsLogo={TailwindLogo} logoName={"Tailwind "} />

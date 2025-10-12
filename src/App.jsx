@@ -12,23 +12,25 @@ import Container from './components/Container';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-[#121212] py-5">
-        <Container>
-          <div className="flex justify-between text-white">
-            <SideBar />
-            <div className="h-auto w-[75%] bg-[#1e1e1f] rounded-2xl ">
-              <Header />
-              <div className="p-4">
-                <Routes>
-                  <Route path="/" element={<About />} />
-                  <Route path="/resume" element={<Resume />} />
-                  <Route path="/project" element={<Project />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </div>
+      <div className="bg-[#121212] py-5 ">
+        <Container className="flex-none lg:flex lg:justify-between space-x-5 text-white">
+          {/* Side Ear start  */}
+          <SideBar className={""} />
+          {/* <Side Bar End  */}
+          {/* Main Part start  */}
+          <div className="w-full lg:w-[73%] h-auto bg-[#1e1e1f] rounded-2xl overflow-hidden ">
+            <Header />
+            <div className="p-4 ">
+              <Routes>
+                <Route path="/" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
             </div>
           </div>
+          {/* Main Part End  */}
         </Container>
       </div>
 
