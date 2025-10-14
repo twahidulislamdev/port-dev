@@ -60,7 +60,7 @@ const Project = () => {
                 {/* Github and Live Link part Start  */}
                 <div class="flex items-center justify-between w-full max-w-xl mx-auto py-6">
                   {/* Left Button  */}
-                  <Link to={"https://github.com/twahidulislamdev/port-dev"}>
+                  <Link to={"https://github.com/twahidulislamdev/uomo"}>
                     <div
                       class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
                     >
@@ -71,7 +71,7 @@ const Project = () => {
 
 
                   {/* Right Button */}
-                  <Link to={"https://port-dev-ivory.vercel.app/"}>
+                  <Link to={"https://uomo-black.vercel.app/"}>
                     <div
                       class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
                     >
