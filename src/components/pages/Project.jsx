@@ -1,10 +1,12 @@
 import React from 'react'
 import Container from '../Container'
 import ProjectOne from '/src/assets/projectOne.png'
+import ProjectTwo from '/src/assets/projectTwo.png'
 import { FaCalendarDays } from "react-icons/fa6";
 import { BsTag } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Project = () => {
   return (
@@ -25,7 +27,7 @@ const Project = () => {
             {/* First project part start  */}
             <div className="w-[33%] h-[550px] border-1 border-gray rounded-lg">
               <div className="w-full">
-                <img className='rounded-lg' src={ProjectOne} alt="" />
+                <img className='w-full h-[240px]  rounded-lg ' src={ProjectOne} alt="" />
               </div>
               <div className="mt-3 px-3 " >
                 <h6 className='text-2xl font-medium '>Uomo E-Commarce web Site</h6>
@@ -58,22 +60,25 @@ const Project = () => {
                 {/* Github and Live Link part Start  */}
                 <div class="flex items-center justify-between w-full max-w-xl mx-auto py-6">
                   {/* Left Button  */}
-                  <div
-                    href="#"
-                    class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
-                  >
-                    <span><FaGithub /></span>
-                    <span class="font-medium">Code</span>
-                  </div>
+                  <Link to={"https://github.com/twahidulislamdev/port-dev"}>
+                    <div
+                      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
+                    >
+                      <span><FaGithub /></span>
+                      <span class="font-medium">Code</span>
+                    </div>
+                  </Link>
+
 
                   {/* Right Button */}
-                  <div
-                    href="#"
-                    class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
-                  >
-                    <span><FiExternalLink /></span>
-                    <span class="font-medium">Code</span>
-                  </div>
+                  <Link to={"https://port-dev-ivory.vercel.app/"}>
+                    <div
+                      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
+                    >
+                      <span><FiExternalLink /></span>
+                      <span class="font-medium">Live </span>
+                    </div>
+                  </Link>
                 </div>
                 {/* Github and Live Link part End  */}
               </div>
@@ -82,7 +87,7 @@ const Project = () => {
             {/* Second project part start  */}
             <div className="w-[33%] h-[550px] border-1 border-gray rounded-lg">
               <div className="w-full">
-                <img className='rounded-lg' src={ProjectOne} alt="" />
+                <img className='w-full h-[240px]  rounded-lg' src={ProjectTwo} alt="" />
               </div>
               <div className="mt-3 px-3 " >
                 <h6 className='text-2xl font-medium '>Uomo E-Commarce web Site</h6>
@@ -115,22 +120,27 @@ const Project = () => {
                 {/* Github and Live Link part Start  */}
                 <div class="flex items-center justify-between w-full max-w-xl mx-auto py-6">
                   {/* Left Button  */}
-                  <div
-                    href="#"
-                    class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
-                  >
-                    <span><FaGithub /></span>
-                    <span class="font-medium">Code</span>
-                  </div>
+                  <Link to={"https://github.com/twahidulislamdev/creative-agency"}>
+                    <div
+                      href="#"
+                      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
+                    >
+                      <span><FaGithub /></span>
+                      <span class="font-medium">Code</span>
+                    </div>
+                  </Link>
 
                   {/* Right Button */}
-                  <div
-                    href="#"
-                    class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
-                  >
-                    <span><FiExternalLink /></span>
-                    <span class="font-medium">Code</span>
-                  </div>
+                  <Link to={"https://twahidulislamdev.github.io/creative-agency/"}>
+                    <div
+                      href="#"
+                      class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer"
+                    >
+                      <span><FiExternalLink /></span>
+                      <span class="font-medium">Link</span>
+                    </div>
+                  </Link>
+
                 </div>
                 {/* Github and Live Link part End  */}
               </div>
