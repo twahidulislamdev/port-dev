@@ -9,7 +9,7 @@ const SideBar = () => {
         <img
           src={MyPicture}
           alt="Profile"
-          className="w-[80px] h-[90px] sm:w-[100px] sm:h-[110px] md:w-[140px] md:h-[160px] lg:w-[200px] lg:h-[240px] rounded-4xl object-cover mx-auto"
+          className="w-[80px] h-[0px] sm:w-[100px] sm:h-[110px] md:w-[140px] md:h-[160px] lg:w-[200px] lg:h-[230px] rounded-4xl object-cover mx-auto"
         />
         <div className="w-full mt-4 flex flex-col items-center">
           <h2 className="text-lg sm:text-xl font-bold text-center">Twahidul Islam</h2>
