@@ -11,8 +11,7 @@ import { Link } from 'react-router-dom';
 const Project = () => {
   return (
     <>
-      <div className="mt-5 px-2">
-        <Container>
+      <div className="mt-5 px-2 ">
           <div className="flex justify-start items-center gap-x-2">
             <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
             <h3 className='text-3xl font-semibold'>Portfolio</h3>
@@ -23,11 +22,11 @@ const Project = () => {
             <li className='text-base font-semibold hover:text-yellow-400'>Web Development</li>
             <li className='text-base font-semibold hover:text-yellow-400'>Mobile Apps</li>
           </ul>
-          <div className="w-full mt-8 flex justify-start gap-x-3">
+          <div className="w-full mt-8 flex justify-between gap-x-3 gap-y-10 flex-wrap">
             {/* First project part start  */}
-            <div className="w-[33%] h-[550px] border-1 border-gray rounded-lg">
+            <div className="w-[90%] lg:w-[49%] h-[750px] lg:h-[550px] m-auto border-1 border-gray rounded-lg">
               <div className="w-full">
-                <img className='w-full h-[240px]  rounded-lg ' src={ProjectOne} alt="" />
+                <img className='w-full h-[500px] lg:h-[240px] rounded-lg ' src={ProjectOne} alt="" />
               </div>
               <div className="mt-3 px-3 " >
                 <h6 className='text-2xl font-medium '>Uomo E-Commarce web Site</h6>
@@ -85,9 +84,9 @@ const Project = () => {
             </div>
             {/* First project part End  */}
             {/* Second project part start  */}
-            <div className="w-[33%] h-[550px] border-1 border-gray rounded-lg">
+            <div className="w-[90%] lg:w-[49%] h-[750px] lg:h-[550px] m-auto border-1 border-gray rounded-lg">
               <div className="w-full">
-                <img className='w-full h-[240px]  rounded-lg' src={ProjectTwo} alt="" />
+                <img className='w-full h-[500px] lg:h-[240px] rounded-lg' src={ProjectTwo} alt="" />
               </div>
               <div className="mt-3 px-3 " >
                 <h6 className='text-2xl font-medium '>Uomo E-Commarce web Site</h6>
@@ -147,7 +146,7 @@ const Project = () => {
             </div>
             {/* Second project part End  */}
           </div>
-        </Container>
+
       </div>
     </>
   )
