@@ -25,13 +25,13 @@ const ProjectCard = ({ className, projectImage, projectTitle, projectDate, proje
                     </div>
                     
                     {/* Project Description */}
-                    <p className='text-sm  text-neutral-400'>{projectDescription}</p>
+                    <p className='text-sm pt-3 text-neutral-400'>{projectDescription}</p>
 
                     {/* Technologies part Start  */}
-                    <div className="flex justify-between items-center flex-wrap gap-3 pt-5">
+                    <div className="flex justify-between items-center flex-wrap gap-2 pt-5">
                         {/* Technology Tags */}
                         {projectTechnologies?.map((tech, index) => (
-                            <div key={index} className="w-auto flex justify-between items-center gap-2 border border-white text-white px-2 lg:px-5 py-2 rounded-xl">
+                            <div key={index} className="w-auto flex justify-between items-center gap-x-1 border border-white text-white px-2 lg:px-5 py-2 rounded-xl">
                                 <BsTag className='text-sm'/>
                                 <span>{tech}</span>
                             </div>
@@ -44,7 +44,7 @@ const ProjectCard = ({ className, projectImage, projectTitle, projectDate, proje
                 <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between w-full max-w-xl mx-auto py-3 px-3 ">
                     {/* GitHub Button  */}
                     <Link to={githubLink}>
-                        <div className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer">
+                        <div className="flex items-center gap-2 bg-black text-white px-5 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer">
                             <span><FaGithub /></span>
                             <span className="font-medium">Code</span>
                         </div>
@@ -52,7 +52,7 @@ const ProjectCard = ({ className, projectImage, projectTitle, projectDate, proje
 
                     {/* Live Demo Button */}
                     <Link to={liveLink}>
-                        <div className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer">
+                        <div className="flex items-center gap-2 bg-black text-white px-5 py-2 rounded-lg border border-gray-800 hover:bg-gray-900 transition hover:cursor-pointer">
                             <span><FiExternalLink /></span>
                             <span className="font-medium">Live</span>
                         </div>

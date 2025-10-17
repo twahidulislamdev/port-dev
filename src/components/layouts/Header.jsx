@@ -14,7 +14,7 @@ const Header = () => {
       </ul>
     </nav>
 
-     <div className="fixed w-full  py-5 left-0 bottom-0 m-auto lg:hidden  bg-[#282829] px-2">
+     <div className="fixed w-full  py-5 left-0 bottom-0 m-auto lg:hidden  bg-[#282829] px-3 z-10">
       <ul className="w-full m-auto flex justify-between ">
         <li><Link to="/" className="hover:text-yellow-400 text-sm">About</Link></li>
         <li><Link to="/resume" className="hover:text-yellow-400 text-sm">Resume</Link></li>
