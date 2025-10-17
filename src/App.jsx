@@ -12,13 +12,16 @@ import Container from './components/Container';
 function App() {
   return (
     <BrowserRouter>
-      <div className=" py-4 min-h-screen ">
+      <div className="py-4 min-h-screen">
         <Container>
-          <div className="flex justify-between flex-wrap text-white">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 text-white">
+            {/* Sidebar - Full width on mobile, fixed width on desktop */}
             <SideBar />
-            <div className="w-full lg:w-[75%] h-auto bg-[#1e1e1f] rounded-2xl overflow-hidden mt-0">
+            {/* Sidebar - Full width on mobile, fixed width on desktop */}
+            {/* Main Content Area */}
+            <div className="w-full lg:w-[75%] bg-[#1e1e1f] rounded-2xl overflow-hidden ml-0 lg:ml-4">
               <Header />
-              <div className="p-3">
+              <div className="p-5 ">
                 <Routes>
                   <Route path="/" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
@@ -28,7 +31,6 @@ function App() {
                 </Routes>
               </div>
             </div>
-
           </div>
         </Container>
       </div>
