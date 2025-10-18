@@ -46,7 +46,7 @@ const Project = () => {
         <li className='text-base font-semibold hover:text-yellow-400'>Mobile Apps</li>
       </ul>
 
-      {/* Projects part */}
+      {/* Projects part start */}
       <div className="w-full mt-8 flex justify-between gap-x-3 gap-y-10 flex-wrap">
         {projectsData.map(project => (
           <ProjectCard
@@ -63,6 +63,7 @@ const Project = () => {
           />
         ))}
       </div>
+      {/* Projects part End  */}
     </div>
   )
 }
