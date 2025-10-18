@@ -12,14 +12,14 @@ import Container from './components/Container';
 function App() {
   return (
     <BrowserRouter>
-      <div className="py-4 min-h-screen">
+      <div className="py-3 min-h-screen">
         <Container>
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 text-white">
+          <div className="flex flex-col lg:flex-row space-x-5 space-y-5 lg:gap-0 text-white">
             {/* Sidebar - Full width on mobile, fixed width on desktop */}
             <SideBar />
             {/* Sidebar - Full width on mobile, fixed width on desktop */}
             {/* Main Content Area */}
-            <div className="w-full lg:w-[75%] bg-[#1e1e1f] rounded-2xl overflow-hidden ml-0 lg:ml-4">
+            <div className="w-full lg:w-[74%] bg-[#1e1e1f] rounded-2xl overflow-hidden ">
               <Header />
               <div className="p-5 ">
                 <Routes>
