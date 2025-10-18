@@ -12,18 +12,18 @@ const ProjectCard = ({ className, projectImage, projectTitle, projectDate, proje
                 <div className="w-full">
                     <img className='w-full h-[200px] lg:h-[250px] rounded-lg object-cover' src={projectImage} alt={projectTitle} />
                 </div>
-                
+
                 {/* Project Content */}
                 <div className="mt-3 px-3" >
                     {/* Project Title */}
                     <h6 className='text-2xl font-medium'>{projectTitle}</h6>
-                    
+
                     {/* Project Date */}
                     <div className="flex justify-start items-center gap-x-3 mt-3">
                         <FaCalendarDays className='text-neutral-400' />
                         <p className='text-neutral-400'>{projectDate}</p>
                     </div>
-                    
+
                     {/* Project Description */}
                     <p className='text-sm pt-3 text-neutral-400'>{projectDescription}</p>
 
@@ -32,7 +32,7 @@ const ProjectCard = ({ className, projectImage, projectTitle, projectDate, proje
                         {/* Technology Tags */}
                         {projectTechnologies?.map((tech, index) => (
                             <div key={index} className="w-auto flex justify-between items-center gap-x-1 border border-white text-white px-2 lg:px-5 py-2 rounded-xl">
-                                <BsTag className='text-sm'/>
+                                <BsTag className='text-sm' />
                                 <span>{tech}</span>
                             </div>
                         ))}

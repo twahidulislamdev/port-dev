@@ -19,7 +19,7 @@ function App() {
             <SideBar />
             {/* Sidebar - Full width on mobile, fixed width on desktop */}
             {/* Main Content Area */}
-            <div className="w-full lg:w-[74%] bg-[#1e1e1f] rounded-2xl overflow-hidden ">
+            <div className="w-full lg:w-[75%] bg-[#1e1e1f] rounded-2xl overflow-hidden ">
               <Header />
               <div className="p-5 ">
                 <Routes>
