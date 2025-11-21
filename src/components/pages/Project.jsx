@@ -39,7 +39,7 @@ const Project = () => {
         <h3 className='text-3xl font-semibold'>Projects</h3>
       </div>
 
-      <ul className=' flex justify-between lg:justify-start items-center gap-5 lg:gap-x-10 mt-8 flex-wrap'>
+      <ul className='flex justify-between lg:justify-start items-center gap-5 lg:gap-x-10 mt-8 flex-wrap'>
         <li className='text-base font-semibold hover:text-yellow-400'>All</li>
         <li className='text-base font-semibold hover:text-yellow-400'>Frontend </li>
         <li className='text-base font-semibold hover:text-yellow-400'>Web Development</li>

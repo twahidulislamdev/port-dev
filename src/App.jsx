@@ -16,8 +16,9 @@ function App() {
         <Container>
           <div className="flex flex-col lg:flex-row space-x-5 space-y-5 lg:gap-0 text-white">
             {/* Sidebar - Full width on mobile, fixed width on desktop */}
-            <SideBar />
+            <SideBar/>
             {/* Sidebar - Full width on mobile, fixed width on desktop */}
+            
             {/* Main Content Area */}
             <div className="w-full lg:w-[75%] bg-[#1e1e1f] rounded-2xl overflow-hidden ">
               <Header />

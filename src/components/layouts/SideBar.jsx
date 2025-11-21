@@ -4,17 +4,18 @@ import {
   IoMailOutline,
   IoPhonePortraitOutline,
   IoLocation,
+  IoChevronUp,
 } from "react-icons/io5";
-import { IoChevronDown } from "react-icons/io5";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa6";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full lg:w-[24%] h-full lg:h-[670px] bg-[#1e1e1f] rounded-2xl p-5 overflow-hidden">
-      {/* ---------- DO NOT CHANGE THIS PART (IMAGE + NAME + TITLE) ---------- */}
-      <div className="px-5 pb-5 lg:p-5 border-b-2 border-[#282829] flex flex-row lg:flex-col justify-center items-center">
+    <div className="relative  w-full lg:w-[24%] h-full lg:h-[670px] bg-[#1e1e1f] rounded-2xl p-3 lg:p-5 overflow-hidden">
+      {/* ---------- Profile ---------- */}
+      <div className="px-5 pt-5 lg:p-5 lg:border-b-2 lg:border-[#282829] flex flex-row lg:flex-col justify-center items-center">
         <img
           src={MyPicture}
           alt="Profile"
@@ -24,32 +25,29 @@ const SideBar = () => {
         <div className="w-full mt-0 lg:mt-4 flex flex-col items-center">
           <h2 className="text-xl font-bold text-center">Twahidul Islam</h2>
 
-          <div className="w-[180px] lg:w-[200px] px-0 lg:px-2 py-2 bg-[#282829] text-sm font-medium mt-3 text-center rounded ml-2">
+          <div className="w-[180px] lg:w-[200px] py-2 bg-[#282829] text-sm font-medium mt-3 text-center rounded">
             MERN Stack Developer
           </div>
         </div>
       </div>
-      {/* -------------------------------------------------------------------- */}
 
-      {/* ---------- MOBILE DROPDOWN ONLY (lg:hidden) ---------- */}
-      <div className="lg:hidden mt-5">
-        <button
-          className="w-full bg-[#282829] py-3 px-4 rounded-lg flex justify-between items-center text-sm font-medium"
+      {/* ---------- Mobile Dropdown Toggle ---------- */}
+      <div className="flex lg:hidden absolute top-0 right-0 bg-[#202022] px-3 py-2 rounded-tr-2xl border border-neutral-600">
+        <IoChevronUp
           onClick={() => setOpen(!open)}
-        >
-          Contact Info
-          <IoChevronDown
-            className={`text-lg transition-all duration-300 ${
-              open ? "rotate-180" : ""
-            }`}
-          />
-        </button>
+          className={`text-xl cursor-pointer transition-all duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </div>
 
+      {/* ---------- Mobile Dropdown Items ---------- */}
+      <div className="lg:hidden mt-5">
         {open && (
-          <div className="mt-5 space-y-5">
+          <div className="mt-5 space-y-5 border-t-2 border-[#282829] pt-5">
             {/* Email */}
             <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
                 <IoMailOutline className="text-xl" />
               </div>
               <div>
@@ -60,7 +58,7 @@ const SideBar = () => {
 
             {/* Phone */}
             <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
                 <IoPhonePortraitOutline className="text-xl" />
               </div>
               <div>
@@ -71,7 +69,7 @@ const SideBar = () => {
 
             {/* Location */}
             <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
                 <IoLocation className="text-xl" />
               </div>
               <div>
@@ -80,20 +78,21 @@ const SideBar = () => {
               </div>
             </div>
 
-            <div className="flex justify-center items-center gap-x-5 pt-3 ">
+            {/* Socials */}
+            <div className="flex justify-center items-center gap-x-10 pt-3 pb-5">
               <FaLinkedin className="text-2xl" />
-              <FaLinkedin className="text-2xl" />
-              <FaLinkedin className="text-2xl" />
-              <FaLinkedin className="text-2xl" />
+              <FaGithub className="text-2xl" />
+              <FaTwitter className="text-2xl" />
+              <FaTelegramPlane className="text-2xl" />
             </div>
           </div>
         )}
       </div>
 
-      {/* ---------- DESKTOP VIEW (unchanged) ---------- */}
+      {/* ---------- Desktop View (unchanged) ---------- */}
       <div className="hidden lg:block mt-5 space-y-5">
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
             <IoMailOutline className="text-xl" />
           </div>
           <div>
@@ -103,7 +102,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
             <IoPhonePortraitOutline className="text-xl" />
           </div>
           <div>
@@ -113,7 +112,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] shadow-md flex items-center justify-center">
+          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
             <IoLocation className="text-xl" />
           </div>
           <div>
@@ -121,11 +120,12 @@ const SideBar = () => {
             <p className="text-base">Dhaka, Bangladesh</p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-x-5 pt-3 ">
-          <FaLinkedin className="text-3xl" />
-          <FaLinkedin className="text-3xl" />
-          <FaLinkedin className="text-3xl" />
-          <FaLinkedin className="text-3xl" />
+
+        <div className="flex justify-center items-center gap-x-10 pt-3">
+          <FaLinkedin className="text-2xl" />
+          <FaGithub className="text-2xl" />
+          <FaTwitter className="text-2xl" />
+          <FaTelegramPlane className="text-2xl" />
         </div>
       </div>
     </div>
