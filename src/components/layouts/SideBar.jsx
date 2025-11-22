@@ -7,7 +7,7 @@ import {
   IoChevronUp,
 } from "react-icons/io5";
 import { FaTelegramPlane } from "react-icons/fa";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
@@ -80,10 +80,36 @@ const SideBar = () => {
 
             {/* Socials */}
             <div className="flex justify-center items-center gap-x-10 pt-3 pb-5">
-              <FaLinkedin className="text-2xl" />
-              <FaGithub className="text-2xl" />
-              <FaTwitter className="text-2xl" />
-              <FaTelegramPlane className="text-2xl" />
+              <FaLinkedin
+                className="text-2xl cursor-pointer hover:text-blue-600 duration-200"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/twahidulislamdev104432",
+                    "_blank"
+                  )
+                }
+              />
+
+              <FaGithub
+                className="text-2xl cursor-pointer hover:text-gray-300 duration-200"
+                onClick={() =>
+                  window.open("https://github.com/twahidulislamDev", "_blank")
+                }
+              />
+
+              <FaXTwitter
+                className="text-2xl cursor-pointer hover:text-blue-400 duration-200"
+                onClick={() =>
+                  window.open("https://twitter.com/twahidulislam", "_blank")
+                }
+              />
+
+              <FaTelegramPlane
+                className="text-2xl cursor-pointer hover:text-blue-500 duration-200"
+                onClick={() =>
+                  window.open("https://t.me/twahidulislamDev", "_blank")
+                }
+              />
             </div>
           </div>
         )}
@@ -121,11 +147,38 @@ const SideBar = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-x-10 pt-3">
-          <FaLinkedin className="text-2xl" />
-          <FaGithub className="text-2xl" />
-          <FaTwitter className="text-2xl" />
-          <FaTelegramPlane className="text-2xl" />
+        {/* Socials */}
+        <div className="flex justify-center items-center gap-x-8 pt-3 pb-5">
+          <FaLinkedin
+            className="text-2xl cursor-pointer hover:text-[#0077B5] duration-200"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/twahidulislamdev104432",
+                "_blank"
+              )
+            }
+          />
+
+          <FaGithub
+            className="text-2xl cursor-pointer hover:text-gray-300 duration-200"
+            onClick={() =>
+              window.open("https://github.com/twahidulislamDev", "_blank")
+            }
+          />
+
+          <FaXTwitter
+            className="text-2xl cursor-pointer hover:text-blue-400 duration-200"
+            onClick={() =>
+              window.open("https://twitter.com/twahidulislam", "_blank")
+            }
+          />
+
+          <FaTelegramPlane
+            className="text-2xl cursor-pointer hover:text-[#0088CC] duration-200"
+            onClick={() =>
+              window.open("https://t.me/twahidulislamDev", "_blank")
+            }
+          />
         </div>
       </div>
     </div>

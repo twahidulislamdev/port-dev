@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { IoIosSend } from "react-icons/io";
 
 const Contact = () => {
@@ -7,18 +7,21 @@ const Contact = () => {
       <div className="">
         <div className="flex justify-start items-center gap-x-2">
           <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
-          <h3 className='text-3xl font-semibold'>Contact</h3>
+          <h3 className="text-3xl font-semibold">Contact</h3>
         </div>
         <div class="container mx-auto mt-5 ">
           <div class="map-container mx-auto max-w-full  h-96 mb-6 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211456.91668941753!2d90.25487531119137!3d23.78106723705999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1760815826584!5m2!1sen!2sbd"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211456.91668941753!2d90.25487531119137!3d23.78106723705999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1760815826584!5m2!1sen!2sbd"
               class="w-full h-full border-0 rounded-xl"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
-          <p class="text-center text-lg">Feel free to visit us at our location in Dhaka!</p>
+          <p class="text-center text-lg">
+            Feel free to visit us at our location in Dhaka!
+          </p>
         </div>
 
         <div className="container mx-auto  max-w-full mt-5 mb-15 lg:mb-0">
@@ -54,7 +57,7 @@ const Contact = () => {
             <div className="flex justify-end items-center">
               <button
                 type="submit"
-                className="w-[170px] lg:w-[200px] px-2 py-3 border-1 border-neutral-600 text-white font-medium rounded-lg flex items-center justify-center space-x-2 transition-colors"
+                className="w-[170px] lg:w-[170px] px-2 py-3 border-1 border-neutral-600 text-white font-medium rounded-lg flex items-center justify-center space-x-2 transition-colors"
               >
                 <IoIosSend />
                 <span>Send Message</span>
@@ -62,13 +65,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
-
-
-
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

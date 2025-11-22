@@ -137,7 +137,7 @@ const About = () => {
                 Back-End (){" "}
               </h4>{" "}
               {/* Guessed this; update if wrong */}
-              <div className="w-full h-[350px] lg:h-[230px] bg-[#202022] gap-2 flex justify-between flex-wrap rounded-lg shadow shadow-gray-700">
+              <div className="w-full h-[350px] lg:h-[230px] bg-[#202022] gap-2 flex justify-between flex-wrap rounded-lg shadow-none lg:shadow shadow-gray-700">
                 <SkillsIcon
                   className={""}
                   SkillsLogo={HtmlLogo}

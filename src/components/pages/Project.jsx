@@ -1,54 +1,75 @@
-import React from 'react'
-import ProjectOne from '/src/assets/projectOne.png'
-import ProjectTwo from '/src/assets/projectTwo.png'
-import ProjectCard from '../ProjectCard';
-
+import React from "react";
+import ProjectOne from "/src/assets/projectOne.png";
+import ProjectTwo from "/src/assets/projectTwo.png";
+import ProjectThree from "../../assets/projectThree.png";
+import ProjectCard from "../ProjectCard";
 
 const Project = () => {
   const projectsData = [
     {
       id: 1,
       image: ProjectOne,
-      title: "Uomo E-Commerce Website",
-      date: "January 2024",
-      description: "A lightweight, production-ready microservice starterkit for Go applications with built-in middleware, observability, and clean architecture patterns.",
-      technologies: ["Figma", "Tailwind", "React"],
+      title: "Uomo Clothing E-Commerce Website",
+      date: "July 2025",
+      description:
+        "A lightweight, production-ready microservice starterkit for Go applications with built-in middleware, observability, and clean architecture patterns.",
+      technologies: ["Figma", "Tailwind", "React", "Redux"],
       githubLink: "https://github.com/twahidulislamdev/uomo",
       liveLink: "https://uomo-black.vercel.app/",
       className: "w-full lg:w-[49%]",
-      imageHeight: "h-[200px] lg:h-[250px]"
+      imageHeight: "h-[200px] lg:h-[250px]",
     },
     {
       id: 2,
       image: ProjectTwo,
-      title: "Creative Agency Website",
-      date: "December 2023",
-      description: "A modern creative agency website with responsive design and smooth animations, observability, and clean architecture patterns. ",
-      technologies: ["Figma", "Tailwind", "React"],
-      githubLink: "https://github.com/twahidulislamdev/creative-agency",
-      liveLink: "https://twahidulislamdev.github.io/creative-agency/",
+      title: "Car Rental Website",
+      date: "September 2025",
+      description:
+        "A modern creative agency website with responsive design and smooth animations, observability, and clean architecture patterns. ",
+      technologies: ["Figma", "Tailwind", "React", "Redux"],
+      githubLink: "https://github.com/twahidulislamdev/go-ride",
+      liveLink: "https://go-ride-xi.vercel.app/",
       className: "w-full lg:w-[49%]",
-      imageHeight: "h-[200px] lg:h-[250px]"
-    }
+      imageHeight: "h-[200px] lg:h-[250px]",
+    },
+    {
+      id: 3,
+      image: ProjectThree,
+      title: "Prime Store E-commarce Website",
+      date: "December 2023",
+      description:
+        "A modern creative agency website with responsive design and smooth animations, observability, and clean architecture patterns. ",
+      technologies: ["Figma", "Tailwind", "React", "Redux"],
+      githubLink: "https://github.com/twahidulislamdev/go-ride",
+      liveLink: "https://go-ride-xi.vercel.app/",
+      className: "w-full lg:w-[49%]",
+      imageHeight: "h-[200px] lg:h-[250px]",
+    },
   ];
 
   return (
     <div className="mt-5 mb-20 lg:mb-0">
       <div className="flex justify-start items-center gap-x-2">
         <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
-        <h3 className='text-3xl font-semibold'>Projects</h3>
+        <h3 className="text-3xl font-semibold">Projects</h3>
       </div>
 
-      <ul className='flex justify-between lg:justify-start items-center gap-5 lg:gap-x-10 mt-8 flex-wrap'>
-        <li className='text-base font-semibold hover:text-yellow-400'>All</li>
-        <li className='text-base font-semibold hover:text-yellow-400'>Frontend </li>
-        <li className='text-base font-semibold hover:text-yellow-400'>Web Development</li>
-        <li className='text-base font-semibold hover:text-yellow-400'>Mobile Apps</li>
+      <ul className="flex justify-between lg:justify-start items-center gap-5 lg:gap-x-10 mt-8 flex-wrap">
+        <li className="text-base font-semibold hover:text-yellow-400">All</li>
+        <li className="text-base font-semibold hover:text-yellow-400">
+          Frontend{" "}
+        </li>
+        <li className="text-base font-semibold hover:text-yellow-400">
+          Web Development
+        </li>
+        <li className="text-base font-semibold hover:text-yellow-400">
+          Mobile Apps
+        </li>
       </ul>
 
       {/* Projects part start */}
       <div className="w-full mt-8 flex justify-between gap-x-3 gap-y-10 flex-wrap">
-        {projectsData.map(project => (
+        {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
             className={project.className}
@@ -65,7 +86,7 @@ const Project = () => {
       </div>
       {/* Projects part End  */}
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

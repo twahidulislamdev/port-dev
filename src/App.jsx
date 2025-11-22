@@ -22,7 +22,7 @@ function App() {
             {/* Main Content Area */}
             <div className="w-full lg:w-[75%] bg-[#1e1e1f] rounded-2xl overflow-hidden ">
               <Header />
-              <div className="p-5 ">
+              <div className="p-3 lg:p-5 ">
                 <Routes>
                   <Route path="/" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
