@@ -1,26 +1,35 @@
-import React from 'react'
-import Container from '../Container'
+import React from "react";
+import Container from "../Container";
 import { IoBookOutline } from "react-icons/io5";
 import { FiFileText } from "react-icons/fi";
+import TwahidulIslamCV from "../../assets/TwahidulIslamCV.pdf";
 
 const Resume = () => {
+  // --- Download CV function ---
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = TwahidulIslamCV; // Use imported file directly
+    link.download = "Twahidul_Islam_CV.pdf";
+    link.click();
+  };
+
   return (
     <>
       <div className="pt-2 pb-20 relative mb-10 lg:mb-0 ">
-        {/* Page Title start  */}
+        {/* Page Title start */}
         <div className="flex justify-center lg:justify-start items-center gap-x-2">
           <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
-          <h3 className='text-3xl font-semibold'>Resume</h3>
+          <h3 className="text-3xl font-semibold">Resume</h3>
         </div>
-        {/* Page Title End  */}
+        {/* Page Title End */}
 
-        {/* Education part start  */}
+        {/* Education part start */}
         <div className=" text-white p-5 mt-3">
           <div className="text-xl font-semibold mb-4 flex items-center space-x-5">
-            <IoBookOutline className='text-3xl text-yellow-100' />
-            <p className='text-2xl'>Eduction</p>
+            <IoBookOutline className="text-3xl text-yellow-100" />
+            <p className="text-2xl">Eduction</p>
           </div>
-          {/* Time Line start  */}
+
           <div className="relative border-l-2 border-yellow-100 ml-3.5">
             <div className="ml-6 mb-8">
               <div className="flex items-center">
@@ -30,12 +39,13 @@ const Resume = () => {
                     Protyashi R A High School
                   </h3>
                   <p className="text-gray-400 py-1">
-                    SSC (Science ) and  ( GPA- 4.56/5.00)
+                    SSC (Science ) and ( GPA- 4.56/5.00)
                   </p>
                   <p className="text-gray-400">2016 - 2021</p>
                 </div>
               </div>
             </div>
+
             <div className="ml-6">
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-yellow-100 rounded-full absolute -left-2.5" />
@@ -44,23 +54,23 @@ const Resume = () => {
                     Shyamoli Ideal Polytechnic Institute
                   </h3>
                   <p className="text-gray-400">
-                    Diploma in Engineering (Computer science)</p>
+                    Diploma in Engineering (Computer science)
+                  </p>
                   <p className="text-gray-400">2022 - 2025</p>
                 </div>
               </div>
             </div>
           </div>
-          {/* Time Line End  */}
         </div>
-        {/* Education part End  */}
+        {/* Education part End */}
 
-        {/* Exprience part start  */}
+        {/* Experience part start */}
         <div className=" text-white p-5">
           <div className="text-xl font-semibold mb-4 flex items-center space-x-5">
-            <IoBookOutline className='text-3xl text-yellow-100' />
-            <p className='text-2xl'>Exprience</p>
+            <IoBookOutline className="text-3xl text-yellow-100" />
+            <p className="text-2xl">Experience</p>
           </div>
-          {/* Time Line start  */}
+
           <div className="relative border-l-2 border-yellow-100 ml-3.5">
             <div className="ml-6 mb-8">
               <div className="flex items-center">
@@ -72,11 +82,11 @@ const Resume = () => {
                   <p className="text-gray-400 py-1">
                     MERN stack Development (Course)
                   </p>
-                  <p className="text-gray-400">January
-                    2025  - Present</p>
+                  <p className="text-gray-400">January 2025 - Present</p>
                 </div>
               </div>
             </div>
+
             <div className="ml-6">
               <div className="flex items-center">
                 <div className="w-4 h-4 bg-yellow-100 rounded-full absolute -left-2.5" />
@@ -85,23 +95,27 @@ const Resume = () => {
                     Genuity Systems Limited
                   </h3>
                   <p className="text-gray-400">
-                    MERN stack Development (Training)</p>
+                    MERN stack Development (Training)
+                  </p>
                   <p className="text-gray-400">September 2025 - Present</p>
                 </div>
               </div>
             </div>
           </div>
-          {/* Time Line End  */}
         </div>
-        {/* Exprience part End  */}
+        {/* Experience part End */}
 
-        <div className="absolute right-0.5 lg:right-2 bottom-5.5 lg:bottom-2 w-[170px] lg:w-[200px]  px-2 py-4 bg-[#222224] flex justify-center items-center gap-x-3 rounded-xl border-2 border-neutral-600 shadow-xs shadow-neutral-600">
-          <FiFileText className='text-lg lg:text-xl'/>
-          <p className='text-base lg:text-lg'>Download CV</p>
+        {/* ---- Download CV Button (No <a> tag) ---- */}
+        <div
+          onClick={handleDownload}
+          className="absolute right-0.5 lg:right-2 bottom-5.5 lg:bottom-2 w-[170px] lg:w-[200px] px-2 py-4 bg-[#222224] flex justify-center items-center gap-x-3 rounded-xl border-2 border-neutral-600 shadow-xs shadow-neutral-600 cursor-pointer hover:bg-neutral-700 duration-200"
+        >
+          <FiFileText className="text-lg lg:text-xl" />
+          <p className="text-base lg:text-lg">Download CV</p>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

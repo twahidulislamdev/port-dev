@@ -14,7 +14,7 @@ const ProjectCard = ({
   githubLink,
   liveLink,
   imageHeight, // Added this prop
-  onImageClick // Added this prop for image click
+  onImageClick, // Added this prop for image click
 }) => {
   return (
     <>
@@ -22,12 +22,11 @@ const ProjectCard = ({
         className={`w-full lg:w-[49%] bg-[#19151b] rounded-lg border border-gray-800 shadow shadow-gray-800 pb-20 relative ${className}`}
       >
         {/* Project Image - Made clickable */}
-        <div 
-          className="w-full cursor-pointer"
-          onClick={onImageClick}
-        >
+        <div className="w-full cursor-pointer" onClick={onImageClick}>
           <img
-            className={`w-full rounded-lg ${imageHeight || 'h-[200px] lg:h-[250px]'}`}
+            className={`w-full rounded-lg ${
+              imageHeight || "h-[200px] lg:h-[250px]"
+            }`}
             src={projectImage}
             alt={projectTitle}
           />
@@ -48,12 +47,12 @@ const ProjectCard = ({
           <p className="text-sm pt-3 text-neutral-400">{projectDescription}</p>
 
           {/* Technologies part Start  */}
-          <div className="flex justify-between items-center flex-wrap gap-2 pt-5">
+          <div className="flex justify-between items-center flex-wrap gap-y-3 pt-5">
             {/* Technology Tags */}
             {projectTechnologies?.map((tech, index) => (
               <div
                 key={index}
-                className="w-auto flex justify-between items-center gap-x-1 border border-white text-white px-2 lg:px-5 py-2 rounded-xl"
+                className="w-auto flex justify-between items-center gap-x-1 border border-white text-white px-3 lg:px-2.5 py-1.5 rounded-xl"
               >
                 <BsTag className="text-sm" />
                 <span>{tech}</span>

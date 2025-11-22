@@ -2,6 +2,7 @@ import React from "react";
 import ProjectOne from "/src/assets/projectOne.png";
 import ProjectTwo from "/src/assets/projectTwo.png";
 import ProjectThree from "../../assets/projectThree.png";
+import ProjectFour from "../../assets/projectFour.png";
 import ProjectCard from "../ProjectCard";
 
 const Project = () => {
@@ -36,12 +37,25 @@ const Project = () => {
       id: 3,
       image: ProjectThree,
       title: "Prime Store E-commarce Website",
-      date: "December 2023",
+      date: "Octamber 2025",
       description:
         "A modern e-commerce platform with advanced product filtering, secure payment integration, and responsive design for optimal shopping experience across all devices.",
       technologies: ["Figma", "Tailwind", "React", "Redux"],
       githubLink: "https://github.com/twahidulislamdev/prime-store",
       liveLink: "https://prime-store-one.vercel.app/",
+      className: "w-full lg:w-[49%]",
+      imageHeight: "h-[200px] lg:h-[250px]",
+    },
+    {
+      id: 4,
+      image: ProjectFour,
+      title: "Creative Agency",
+      date: "June 2025",
+      description:
+        "A modern e-commerce platform with advanced product filtering, secure payment integration, and responsive design for optimal shopping experience across all devices.",
+      technologies: ["Figma", "HTML", "Tailwind"],
+      githubLink: "https://github.com/twahidulislamdev/creative-agency",
+      liveLink: "https://twahidulislamdev.github.io/creative-agency/",
       className: "w-full lg:w-[49%]",
       imageHeight: "h-[200px] lg:h-[250px]",
     },
