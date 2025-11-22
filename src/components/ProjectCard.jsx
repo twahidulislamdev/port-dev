@@ -13,16 +13,21 @@ const ProjectCard = ({
   projectTechnologies,
   githubLink,
   liveLink,
+  imageHeight, // Added this prop
+  onImageClick // Added this prop for image click
 }) => {
   return (
     <>
       <div
         className={`w-full lg:w-[49%] bg-[#19151b] rounded-lg border border-gray-800 shadow shadow-gray-800 pb-20 relative ${className}`}
       >
-        {/* Project Image */}
-        <div className="w-full">
+        {/* Project Image - Made clickable */}
+        <div 
+          className="w-full cursor-pointer"
+          onClick={onImageClick}
+        >
           <img
-            className="w-full h-[200px] lg:h-[250px] rounded-lg "
+            className={`w-full rounded-lg ${imageHeight || 'h-[200px] lg:h-[250px]'}`}
             src={projectImage}
             alt={projectTitle}
           />

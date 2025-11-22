@@ -57,7 +57,7 @@ const Contact = () => {
             <div className="flex justify-end items-center">
               <button
                 type="submit"
-                className="w-[170px] lg:w-[170px] px-2 py-3 border-1 border-neutral-600 text-white font-medium rounded-lg flex items-center justify-center space-x-2 transition-colors"
+                className="w-[170px] lg:w-[170px] px-2 py-3 border-2 border-neutral-600 shadow-xs shadow-neutral-600 text-white font-medium rounded-lg flex items-center justify-center space-x-2 transition-colors"
               >
                 <IoIosSend />
                 <span>Send Message</span>

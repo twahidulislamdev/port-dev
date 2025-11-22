@@ -48,7 +48,7 @@ const About = () => {
 
           <div className="flex justify-start items-center gap-x-5 gap-y-5 mt-5 flex-wrap">
             {/* First part start  */}
-            <div className="w-full lg:w-[48%] m-auto h-[200px] lg:h-[180px] bg-[#202022] px-5  py-0 lg:py-10 rounded-lg shadow shadow-gray-700">
+            <div className="w-full lg:w-[48%] m-auto h-[200px] lg:h-[180px] bg-[#202022] px-5  py-0 lg:py-10 rounded-lg shadow shadow-neutral-600">
               <div className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-5 py-2">
                 <FaLaptopCode className="text-[80px] lg:text-[100px]" />
                 <div className="space-y-2">
@@ -61,7 +61,7 @@ const About = () => {
             </div>
             {/* First part End  */}
             {/* Second part Start  */}
-            <div className="w-full lg:w-[48%] m-auto h-[200px] lg:h-[180px] bg-[#202022] px-5  py-0 lg:py-10 rounded-lg shadow shadow-gray-700">
+            <div className="w-full lg:w-[48%] m-auto h-[200px] lg:h-[180px] bg-[#202022] px-5  py-0 lg:py-10 rounded-lg shadow shadow-neutral-600">
               <div className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-5 py-2">
                 <SlScreenSmartphone className="text-[80px] lg:text-[100px]" />
                 <div className="space-y-2">

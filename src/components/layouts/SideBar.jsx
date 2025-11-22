@@ -15,7 +15,7 @@ const SideBar = () => {
   return (
     <div className="relative  w-full lg:w-[24%] h-full lg:h-[670px] bg-[#1e1e1f] rounded-2xl p-3 lg:p-5 overflow-hidden">
       {/* ---------- Profile ---------- */}
-      <div className="px-5 pt-5 lg:p-5 lg:border-b-2 lg:border-[#282829] flex flex-row lg:flex-col justify-center items-center">
+      <div className="px-5 pt-5 lg:p-5 lg:border-b-2 lg:border-neutral-600 flex flex-row lg:flex-col justify-center items-center">
         <img
           src={MyPicture}
           alt="Profile"
@@ -32,10 +32,10 @@ const SideBar = () => {
       </div>
 
       {/* ---------- Mobile Dropdown Toggle ---------- */}
-      <div className="flex lg:hidden absolute top-0 right-0 bg-[#202022] px-3 py-2 rounded-tr-2xl border border-neutral-600">
+      <div className="flex lg:hidden absolute top-0 right-0 bg-[#202022] px-3 py-2 rounded-bl-3xl rounded-tr-2xl border-2 border-neutral-500 shadow-xs shadow-neutral-5 600">
         <IoChevronUp
           onClick={() => setOpen(!open)}
-          className={`text-xl cursor-pointer transition-all duration-300 ${
+          className={`text-2xl cursor-pointer transition-all duration-300 ${
             open ? "rotate-180" : ""
           }`}
         />
@@ -44,10 +44,10 @@ const SideBar = () => {
       {/* ---------- Mobile Dropdown Items ---------- */}
       <div className="lg:hidden mt-5">
         {open && (
-          <div className="mt-5 space-y-5 border-t-2 border-[#282829] pt-5">
+          <div className="mt-5 space-y-5 border-t-1 border-neutral-600 pt-5">
             {/* Email */}
             <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
                 <IoMailOutline className="text-xl" />
               </div>
               <div>
@@ -58,7 +58,7 @@ const SideBar = () => {
 
             {/* Phone */}
             <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
                 <IoPhonePortraitOutline className="text-xl" />
               </div>
               <div>
@@ -68,8 +68,8 @@ const SideBar = () => {
             </div>
 
             {/* Location */}
-            <div className="flex items-center gap-x-5">
-              <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+            <div className="flex items-center gap-x-5 border-neutral-600  border-b-1 pb-5">
+              <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
                 <IoLocation className="text-xl" />
               </div>
               <div>
@@ -79,7 +79,7 @@ const SideBar = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex justify-center items-center gap-x-10 pt-3 pb-5">
+            <div className="flex justify-center items-center gap-x-10 pb-5">
               <FaLinkedin
                 className="text-2xl cursor-pointer hover:text-blue-600 duration-200"
                 onClick={() =>
@@ -89,21 +89,18 @@ const SideBar = () => {
                   )
                 }
               />
-
               <FaGithub
                 className="text-2xl cursor-pointer hover:text-gray-300 duration-200"
                 onClick={() =>
                   window.open("https://github.com/twahidulislamDev", "_blank")
                 }
               />
-
               <FaXTwitter
                 className="text-2xl cursor-pointer hover:text-blue-400 duration-200"
                 onClick={() =>
                   window.open("https://twitter.com/twahidulislam", "_blank")
                 }
               />
-
               <FaTelegramPlane
                 className="text-2xl cursor-pointer hover:text-blue-500 duration-200"
                 onClick={() =>
@@ -118,7 +115,7 @@ const SideBar = () => {
       {/* ---------- Desktop View (unchanged) ---------- */}
       <div className="hidden lg:block mt-5 space-y-5">
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
             <IoMailOutline className="text-xl" />
           </div>
           <div>
@@ -128,7 +125,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
             <IoPhonePortraitOutline className="text-xl" />
           </div>
           <div>
@@ -138,7 +135,7 @@ const SideBar = () => {
         </div>
 
         <div className="flex items-center gap-x-5">
-          <div className="w-10 h-12 rounded-lg bg-[#202022] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-neutral-700 flex items-center justify-center">
             <IoLocation className="text-xl" />
           </div>
           <div>

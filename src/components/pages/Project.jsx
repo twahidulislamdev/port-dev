@@ -25,7 +25,7 @@ const Project = () => {
       title: "Car Rental Website",
       date: "September 2025",
       description:
-        "A modern creative agency website with responsive design and smooth animations, observability, and clean architecture patterns. ",
+        "A comprehensive car rental platform with real-time vehicle availability, booking management, and seamless payment integration for a modern car rental experience.",
       technologies: ["Figma", "Tailwind", "React", "Redux"],
       githubLink: "https://github.com/twahidulislamdev/go-ride",
       liveLink: "https://go-ride-xi.vercel.app/",
@@ -38,14 +38,18 @@ const Project = () => {
       title: "Prime Store E-commarce Website",
       date: "December 2023",
       description:
-        "A modern creative agency website with responsive design and smooth animations, observability, and clean architecture patterns. ",
+        "A modern e-commerce platform with advanced product filtering, secure payment integration, and responsive design for optimal shopping experience across all devices.",
       technologies: ["Figma", "Tailwind", "React", "Redux"],
-      githubLink: "https://github.com/twahidulislamdev/go-ride",
-      liveLink: "https://go-ride-xi.vercel.app/",
+      githubLink: "https://github.com/twahidulislamdev/prime-store",
+      liveLink: "https://prime-store-one.vercel.app/",
       className: "w-full lg:w-[49%]",
       imageHeight: "h-[200px] lg:h-[250px]",
     },
   ];
+  // Function to handle image click and open live project
+  const handleImageClick = (liveLink) => {
+    window.open(liveLink, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div className="mt-5 mb-20 lg:mb-0">
@@ -81,6 +85,7 @@ const Project = () => {
             githubLink={project.githubLink}
             liveLink={project.liveLink}
             imageHeight={project.imageHeight}
+            onImageClick={() => handleImageClick(project.liveLink)}
           />
         ))}
       </div>

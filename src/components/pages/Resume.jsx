@@ -95,7 +95,7 @@ const Resume = () => {
         </div>
         {/* Exprience part End  */}
 
-        <div className="absolute right-0.5 lg:right-2 bottom-1 lg:bottom-2 w-[170px] lg:w-[200px]  px-2 py-4 bg-[#222224] flex justify-center items-center gap-x-3 rounded-xl shadow-xs shadow-yellow-100">
+        <div className="absolute right-0.5 lg:right-2 bottom-5.5 lg:bottom-2 w-[170px] lg:w-[200px]  px-2 py-4 bg-[#222224] flex justify-center items-center gap-x-3 rounded-xl border-2 border-neutral-600 shadow-xs shadow-neutral-600">
           <FiFileText className='text-lg lg:text-xl'/>
           <p className='text-base lg:text-lg'>Download CV</p>
         </div>

@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
     {/* Header for Desktop Device start */}
-      <div className="w-[60%] m-auto hidden lg:flex justify-center items-center   bg-[#282829] p-4 rounded-b-xl">
+      <div className="w-[60%] m-auto hidden lg:flex justify-center items-center bg-[#282829] p-4 rounded-b-xl">
         <ul className="w-full m-auto flex justify-between space-x-10">
           <li>
             <Link to="/" className="hover:text-yellow-400">
