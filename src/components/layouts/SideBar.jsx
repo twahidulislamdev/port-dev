@@ -13,7 +13,7 @@ const SideBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative  w-full lg:w-[24%] h-full lg:h-[670px] bg-[#1e1e1f] rounded-2xl p-3 lg:p-5 overflow-hidden">
+    <div className="relative  w-full lg:w-[24%] h-full lg:h-[720px] bg-[#1e1e1f] rounded-2xl p-3 lg:p-5 overflow-hidden">
       {/* ---------- Profile ---------- */}
       <div className="px-5 pt-5 lg:p-5 lg:border-b-2 lg:border-neutral-600 flex flex-row lg:flex-col justify-center items-center">
         <img
@@ -79,35 +79,46 @@ const SideBar = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex justify-center items-center gap-x-10 pb-5">
-              <FaLinkedin
-                className="text-2xl cursor-pointer hover:text-blue-600 duration-200"
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/twahidulislamdev104432",
-                    "_blank"
-                  )
-                }
-              />
-              <FaGithub
-                className="text-2xl cursor-pointer hover:text-gray-300 duration-200"
-                onClick={() =>
-                  window.open("https://github.com/twahidulislamDev", "_blank")
-                }
-              />
-              <FaXTwitter
-                className="text-2xl cursor-pointer hover:text-blue-400 duration-200"
-                onClick={() =>
-                  window.open("https://twitter.com/twahidulislam", "_blank")
-                }
-              />
-              <FaTelegramPlane
-                className="text-2xl cursor-pointer hover:text-blue-500 duration-200"
-                onClick={() =>
-                  window.open("https://t.me/twahidulislamDev", "_blank")
-                }
-              />
+            <div className="border-t border-neutral-800/50">
+          <p className="text-neutral-400 text-sm mb-3 text-center">FOLLOW US</p>
+          <div className="flex justify-center items-center gap-4">
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-600/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/twahidulislamdev104432",
+                  "_blank"
+                )
+              }
+            >
+              <FaLinkedin className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
             </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-gray-600/20 border border-neutral-700/50 hover:border-gray-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://github.com/twahidulislamDev", "_blank")
+              }
+            >
+              <FaGithub className="text-neutral-400 group-hover:text-gray-300 text-xl transition-colors" />
+            </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-400/20 border border-neutral-700/50 hover:border-blue-300/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://twitter.com/twahidulislam", "_blank")
+              }
+            >
+              <FaXTwitter className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+            </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-500/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://t.me/twahidulislamDev", "_blank")
+              }
+            >
+              <FaTelegramPlane className="text-neutral-400 group-hover:text-blue-500 text-xl transition-colors" />
+            </div>
+          </div>
+        </div>
           </div>
         )}
       </div>
@@ -145,37 +156,45 @@ const SideBar = () => {
         </div>
 
         {/* Socials */}
-        <div className="flex justify-center items-center gap-x-8 pt-3 pb-5">
-          <FaLinkedin
-            className="text-2xl cursor-pointer hover:text-[#0077B5] duration-200"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/twahidulislamdev104432",
-                "_blank"
-              )
-            }
-          />
-
-          <FaGithub
-            className="text-2xl cursor-pointer hover:text-gray-300 duration-200"
-            onClick={() =>
-              window.open("https://github.com/twahidulislamDev", "_blank")
-            }
-          />
-
-          <FaXTwitter
-            className="text-2xl cursor-pointer hover:text-blue-400 duration-200"
-            onClick={() =>
-              window.open("https://twitter.com/twahidulislam", "_blank")
-            }
-          />
-
-          <FaTelegramPlane
-            className="text-2xl cursor-pointer hover:text-[#0088CC] duration-200"
-            onClick={() =>
-              window.open("https://t.me/twahidulislamDev", "_blank")
-            }
-          />
+        <div className="pt-4 border-t border-neutral-800/50">
+          <p className="text-neutral-400 text-sm mb-3 text-center">FOLLOW US</p>
+          <div className="flex justify-center items-center gap-4">
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-600/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/twahidulislamdev104432",
+                  "_blank"
+                )
+              }
+            >
+              <FaLinkedin className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+            </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-gray-600/20 border border-neutral-700/50 hover:border-gray-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://github.com/twahidulislamDev", "_blank")
+              }
+            >
+              <FaGithub className="text-neutral-400 group-hover:text-gray-300 text-xl transition-colors" />
+            </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-400/20 border border-neutral-700/50 hover:border-blue-300/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://twitter.com/twahidulislam", "_blank")
+              }
+            >
+              <FaXTwitter className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+            </div>
+            <div
+              className="p-3 bg-neutral-800/50 hover:bg-blue-500/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+              onClick={() =>
+                window.open("https://t.me/twahidulislamDev", "_blank")
+              }
+            >
+              <FaTelegramPlane className="text-neutral-400 group-hover:text-blue-500 text-xl transition-colors" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

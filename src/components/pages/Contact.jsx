@@ -1,163 +1,211 @@
 import React, { useState } from "react";
-import { IoIosSend } from "react-icons/io";
+import MyPicture from "../../assets/myPicture.png";
+import {
+  IoMailOutline,
+  IoPhonePortraitOutline,
+  IoLocation,
+  IoChevronUp,
+} from "react-icons/io5";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async () => {
-    if (!formData.name || !formData.email || !formData.message) {
-      setStatus("validation");
-      return;
-    }
-
-    setLoading(true);
-    setStatus("");
-
-    const serviceId = "service_aonq8e9";
-    const templateId = "template_uguun54";
-    const publicKey = "g3kkCWDzUpSwZ-YZV";
-
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    try {
-      const response = await fetch(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            service_id: serviceId,
-            template_id: templateId,
-            user_id: publicKey,
-            template_params: templateParams,
-          }),
-        }
-      );
-
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      setStatus("error");
-    } finally {
-      setLoading(false);
-    }
-  };
+const SideBar = () => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="pb-20">
-      {/* Header */}
-      <div className="flex justify-start items-center gap-x-3 mb-6">
-        <div className="w-4.5 h-7.5 bg-amber-400 rounded"></div>
-        <h3 className="text-3xl font-semibold tracking-wide">Contact</h3>
-      </div>
+    <div className="relative w-full lg:w-[24%] h-full lg:h-[770px] bg-[#1e1e1f] rounded-2xl p-3 lg:p-5 overflow-hidden">
+      {/* ---------- Profile ---------- */}
+      <div className="px-5 pt-5 lg:p-5 lg:border-b-2 lg:border-neutral-600 flex flex-row lg:flex-col justify-center items-center">
+        <img
+          src={MyPicture}
+          alt="Profile"
+          className="w-[130px] lg:w-[200px] h-[100px] lg:h-[230px] rounded-2xl lg:rounded-4xl object-cover mx-auto"
+        />
 
-      {/* Map */}
-      <div className="container mx-auto mt-8">
-        <div className="map-container mx-auto max-w-full h-96 mb-8 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211456.91668941753!2d90.25487531119137!3d23.78106723705999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e1!3m2!1sen!2sbd!4v1760815826584!5m2!1sen!2sbd"
-            className="w-full h-full border-0"
-            loading="lazy"
-          ></iframe>
-        </div>
-        <p className="text-center text-lg text-neutral-300 tracking-wide">
-          Feel free to visit us at our location in Dhaka!
-        </p>
-      </div>
+        <div className="w-full mt-0 lg:mt-4 flex flex-col items-center">
+          <h2 className="text-xl font-bold text-center">Twahidul Islam</h2>
 
-      {/* Contact Form */}
-      <div className="container mx-auto max-w-full mt-12">
-        <h2 className="text-2xl font-semibold mb-6 tracking-wide">
-          Contact Form
-        </h2>
-
-        {/* Alerts */}
-        {status === "success" && (
-          <div className="mb-5 p-4 bg-green-100 text-green-800 rounded-lg shadow-sm border border-green-300">
-            Message sent successfully!
-          </div>
-        )}
-
-        {status === "error" && (
-          <div className="mb-5 p-4 bg-red-100 text-red-800 rounded-lg shadow-sm border border-red-300">
-            Failed to send message. Try again.
-          </div>
-        )}
-
-        {status === "validation" && (
-          <div className="mb-5 p-4 bg-yellow-100 text-yellow-800 rounded-lg shadow-sm border border-yellow-300">
-            Please fill all fields.
-          </div>
-        )}
-
-        <div className="space-y-5">
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your Name"
-            className="w-full p-3 rounded-lg bg-neutral-900 border border-neutral-700 text-white focus:border-amber-400 transition-all shadow-inner"
-          />
-
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email Address"
-            className="w-full p-3 rounded-lg bg-neutral-900 border border-neutral-700 text-white focus:border-amber-400 transition-all shadow-inner"
-          />
-
-          {/* Message */}
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Type your message..."
-            className="w-full p-3 h-32 rounded-lg bg-neutral-900 border border-neutral-700 text-white resize-none focus:border-amber-400 transition-all shadow-inner"
-          />
-
-          {/* Submit Button */}
-          <div className="flex justify-end">
-            <button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="w-[180px] px-3 py-3 border-2 border-neutral-700 shadow-md text-white font-medium rounded-lg flex items-center justify-center gap-2 hover:bg-neutral-800 hover:border-neutral-500 active:scale-95 transition-all disabled:opacity-50"
-            >
-              <IoIosSend size={20} />
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+          <div className="w-[180px] lg:w-[200px] py-2 bg-[#282829] text-sm font-medium mt-3 text-center rounded">
+            MERN Stack Developer
           </div>
         </div>
       </div>
+
+      {/* ---------- Mobile Dropdown Toggle ---------- */}
+      <div className="flex lg:hidden absolute top-0 right-0 bg-[#202022] px-3 py-2 rounded-bl-3xl rounded-tr-2xl border-2 border-neutral-500 shadow-xs shadow-neutral-5 600">
+        <IoChevronUp
+          onClick={() => setOpen(!open)}
+          className={`text-2xl cursor-pointer transition-all duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </div>
+
+      {/* ---------- Mobile Dropdown Items ---------- */}
+      <div className="lg:hidden">
+        {open && (
+          <div className="hidden lg:block mt-5 space-y-5 border-t border-neutral-800/50 pt-5">
+            {/* Email */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoMailOutline className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">EMAIL</h6>
+                <p className="text-white text-base">twahid746@gmail.com</p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoPhonePortraitOutline className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">PHONE</h6>
+                <p className="text-white text-base">+8801825653993</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoLocation className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">LOCATION</h6>
+                <p className="text-white text-base">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            {/* Socials */}
+            <div className="pt-4 border-t border-neutral-800/50">
+              <p className="text-neutral-400 text-sm mb-3 text-center">
+                FOLLOW US
+              </p>
+              <div className="flex justify-center items-center gap-4">
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-600/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/twahidulislamdev104432",
+                      "_blank"
+                    )
+                  }
+                >
+                  <FaLinkedin className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-gray-600/20 border border-neutral-700/50 hover:border-gray-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://github.com/twahidulislamDev", "_blank")
+                  }
+                >
+                  <FaGithub className="text-neutral-400 group-hover:text-gray-300 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-400/20 border border-neutral-700/50 hover:border-blue-300/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://twitter.com/twahidulislam", "_blank")
+                  }
+                >
+                  <FaXTwitter className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-500/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://t.me/twahidulislamDev", "_blank")
+                  }
+                >
+                  <FaTelegramPlane className="text-neutral-400 group-hover:text-blue-500 text-xl transition-colors" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ---------- Desktop View (Always visible on desktop) ---------- */}
+      <div className="hidden lg:block mt-5 space-y-5 border-t border-neutral-800/50 pt-5">
+            {/* Email */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoMailOutline className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">EMAIL</h6>
+                <p className="text-white text-base">twahid746@gmail.com</p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoPhonePortraitOutline className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">PHONE</h6>
+                <p className="text-white text-base">+8801825653993</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="flex items-center gap-4 p-3 hover:bg-neutral-800/30 rounded-xl transition-all">
+              <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+                <IoLocation className="text-amber-400 text-lg" />
+              </div>
+              <div>
+                <h6 className="text-neutral-400 text-sm">LOCATION</h6>
+                <p className="text-white text-base">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            {/* Socials */}
+            <div className="pt-4 border-t border-neutral-800/50">
+              <p className="text-neutral-400 text-sm mb-3 text-center">
+                FOLLOW US
+              </p>
+              <div className="flex justify-center items-center gap-4">
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-600/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/twahidulislamdev104432",
+                      "_blank"
+                    )
+                  }
+                >
+                  <FaLinkedin className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-gray-600/20 border border-neutral-700/50 hover:border-gray-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://github.com/twahidulislamDev", "_blank")
+                  }
+                >
+                  <FaGithub className="text-neutral-400 group-hover:text-gray-300 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-400/20 border border-neutral-700/50 hover:border-blue-300/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://twitter.com/twahidulislam", "_blank")
+                  }
+                >
+                  <FaXTwitter className="text-neutral-400 group-hover:text-blue-400 text-xl transition-colors" />
+                </div>
+                <div
+                  className="p-3 bg-neutral-800/50 hover:bg-blue-500/20 border border-neutral-700/50 hover:border-blue-400/30 rounded-xl cursor-pointer transition-all group"
+                  onClick={() =>
+                    window.open("https://t.me/twahidulislamDev", "_blank")
+                  }
+                >
+                  <FaTelegramPlane className="text-neutral-400 group-hover:text-blue-500 text-xl transition-colors" />
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   );
 };
 
-export default Contact;
+export default SideBar;
