@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   IoPersonOutline,
   IoDocumentTextOutline,
@@ -15,29 +15,58 @@ const Header = () => {
       <div className="w-[60%] m-auto hidden lg:flex justify-center items-center bg-[#282829] p-4 rounded-b-xl">
         <ul className="w-full m-auto flex justify-between space-x-10">
           <li>
-            <Link to="/" className="hover:text-yellow-400">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }
+            >
               About
-            </Link>
+            </NavLink>
           </li>
+
           <li>
-            <Link to="/resume" className="hover:text-yellow-400">
+            <NavLink
+              to="/resume"
+              className={({ isActive }) =>
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }
+            >
               Resume
-            </Link>
+            </NavLink>
           </li>
+
           <li>
-            <Link to="/project" className="hover:text-yellow-400">
+            <NavLink
+              to="/project"
+              className={({ isActive }) =>
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }
+            >
               Project
-            </Link>
+            </NavLink>
           </li>
+
           <li>
-            <Link to="/blog" className="hover:text-yellow-400">
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }
+            >
               Blog
-            </Link>
+            </NavLink>
           </li>
+
           <li>
-            <Link to="/contact" className="hover:text-yellow-400">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }
+            >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -47,49 +76,69 @@ const Header = () => {
       <div className="fixed w-full py-5 left-0 bottom-0 m-auto lg:hidden bg-[#282829] px-3 z-10">
         <div className="w-full m-auto flex justify-between text-white">
           {/* ABOUT */}
-          <Link
+          <NavLink
             to="/"
-            className="flex flex-col items-center hover:text-yellow-400 text-xs"
+            className={({ isActive }) =>
+              `flex flex-col items-center text-xs ${
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }`
+            }
           >
             <IoPersonOutline className="text-lg mb-1" />
             About
-          </Link>
+          </NavLink>
 
           {/* RESUME */}
-          <Link
+          <NavLink
             to="/resume"
-            className="flex flex-col items-center hover:text-yellow-400 text-xs"
+            className={({ isActive }) =>
+              `flex flex-col items-center text-xs ${
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }`
+            }
           >
             <IoDocumentTextOutline className="text-lg mb-1" />
             Resume
-          </Link>
+          </NavLink>
 
           {/* PROJECT */}
-          <Link
+          <NavLink
             to="/project"
-            className="flex flex-col items-center hover:text-yellow-400 text-xs"
+            className={({ isActive }) =>
+              `flex flex-col items-center text-xs ${
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }`
+            }
           >
             <IoFolderOpenOutline className="text-lg mb-1" />
             Project
-          </Link>
+          </NavLink>
 
           {/* BLOG */}
-          <Link
+          <NavLink
             to="/blog"
-            className="flex flex-col items-center hover:text-yellow-400 text-xs"
+            className={({ isActive }) =>
+              `flex flex-col items-center text-xs ${
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }`
+            }
           >
             <IoNewspaperOutline className="text-lg mb-1" />
             Blog
-          </Link>
+          </NavLink>
 
           {/* CONTACT */}
-          <Link
+          <NavLink
             to="/contact"
-            className="flex flex-col items-center hover:text-yellow-400 text-xs"
+            className={({ isActive }) =>
+              `flex flex-col items-center text-xs ${
+                isActive ? "text-amber-400" : "hover:text-yellow-400"
+              }`
+            }
           >
             <IoMailOutline className="text-lg mb-1" />
             Contact
-          </Link>
+          </NavLink>
         </div>
       </div>
       {/* Header for Mobile Device End */}
