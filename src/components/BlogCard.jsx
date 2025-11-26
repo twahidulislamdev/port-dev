@@ -7,14 +7,16 @@ const BlogCard = ({
   blogTitle,
   blogDate,
   blogDescription,
+  onImageClick,
+  liveLink,
 }) => {
   return (
     <>
       <div
-        className={`w-full lg:w-[49%] h-[350px] lg:h-[370px] bg-[#19151b] rounded-lg border border-gray-800 shadow shadow-gray-800  relative ${className}`}
+        className={`w-full lg:w-[49%] h-[400px] lg:h-[410px] bg-[#19151b] rounded-lg border border-gray-800 shadow shadow-gray-800  relative ${className}`}
       >
         {/* Project Image */}
-        <div className="w-full">
+        <div className="w-full hover:cursor-pointer" onClick={onImageClick}>
           <img
             className="w-full h-[130px] lg:h-[170px] rounded-lg object-cover "
             src={blogImage}
@@ -25,7 +27,11 @@ const BlogCard = ({
         {/* Project Content */}
         <div className="mt-3 px-3">
           {/* Project Title */}
-          <h6 className="text-2xl font-medium">{blogTitle}</h6>
+          <Link to={liveLink}>
+            <h6 className="text-xl font-medium hover:text-amber-400">
+              {blogTitle}
+            </h6>
+          </Link>
 
           {/* Project Date */}
           <div className="flex justify-start items-center gap-x-3 mt-3">

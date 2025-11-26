@@ -13,8 +13,8 @@ const ProjectCard = ({
   projectTechnologies,
   githubLink,
   liveLink,
-  imageHeight, // Added this prop
-  onImageClick, // Added this prop for image click
+  imageHeight,
+  onImageClick,
 }) => {
   return (
     <>
